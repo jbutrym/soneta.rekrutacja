@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9DCA4471-590A-4CA2-BE87-830B36A31619}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JButrym.ZadanieRekrutacyjne</RootNamespace>
+    <AssemblyName>JButrym.ZadanieRekrutacyjne</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Soneta.Business">
+      <HintPath>..\..\..\..\Program Files (x86)\Soneta\enova365 11.0.5752\Soneta.Business.dll</HintPath>
+    </Reference>
+    <Reference Include="Soneta.Business.UI">
+      <HintPath>..\..\..\..\Program Files (x86)\Soneta\enova365 11.0.5752\Soneta.Business.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Soneta.Core">
+      <HintPath>..\..\..\..\Program Files (x86)\Soneta\enova365 11.0.5752\Soneta.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Soneta.CRM">
+      <HintPath>..\..\..\..\Program Files (x86)\Soneta\enova365 11.0.5752\Soneta.CRM.dll</HintPath>
+    </Reference>
+    <Reference Include="Soneta.Handel">
+      <HintPath>..\..\..\..\Program Files (x86)\Soneta\enova365 11.0.5752\Soneta.Handel.dll</HintPath>
+    </Reference>
+    <Reference Include="Soneta.Kasa">
+      <HintPath>..\..\..\..\Program Files (x86)\Soneta\enova365 11.0.5752\Soneta.Kasa.dll</HintPath>
+    </Reference>
+    <Reference Include="Soneta.Types">
+      <HintPath>..\..\..\..\Program Files (x86)\Soneta\enova365 11.0.5752\Soneta.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extender\CommitCounter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Jbutrym.Git\JButrym.Git.csproj">
+      <Project>{2c69a85a-1ae1-4c89-8ffc-fe05b7010217}</Project>
+      <Name>JButrym.Git</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UI\CommitCounter.pageform.xml" />
+    <Content Include="Utils\examples.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Schema\Form.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

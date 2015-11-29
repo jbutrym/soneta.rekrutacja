@@ -1,0 +1,30 @@
+﻿<?xml version="1.0"?>
+<DataForm Contexts="License.All" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+          xmlns="http://www.enova.pl/schema/form.xsd">
+  <Page CaptionHtml="Jarosław Butrym - zadanie rektrutacyjne">
+    <Stack>
+      <Group CaptionHtml="Jarosław Butrym - zadanie rektrutacyjne">
+        <Row>
+          <Field CaptionHtml="Ścieżka do git.exe"  EditValue="{GitPathField}" LabelWidth="25" Width="30"/>
+        </Row>
+        <Row>
+          <Field CaptionHtml="Ścieżka do repozytorium git"  EditValue="{RepoPathField}" LabelWidth="25" Width="30"/>
+        </Row>          
+        <Row>
+          <Field CaptionHtml="Osoba"  EditValue="{AuthorField}" LabelWidth="25" Width="30"/>
+        </Row>
+        <Row>
+          <Field CaptionHtml="Data"  EditValue="{DateField}"  LabelWidth="25" Width="30"/>
+        </Row>      
+        <Row>
+          <Command CaptionHtml="Ilość commitów, które dana osoba wprowadziła danego dnia"  MethodName="ShowCountValue" Width="50"/>
+        </Row>        
+        <Row>
+          <Command CaptionHtml="Średnia ilość commitów dodawanych przez daną osobę dziennie"  MethodName="ShowAverangeValue"  Width="50"/>
+        </Row>   
+      </Group>
+    </Stack>
+  </Page>
+</DataForm>
